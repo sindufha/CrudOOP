@@ -23,39 +23,30 @@ public class user extends koneksi{
     public String getUserName() {
         return userName;
     }
-
     public void setUserName(String userName) {
         this.userName = userName;
     }
-
     public String getUserEmail() {
         return userEmail;
     }
-
     public void setUserEmail(String userEmail) {
         this.userEmail = userEmail;
     }
-
     public String getUserPassword() {
         return userPassword;
     }
-
     public void setUserPassword(String UserPassword) {
         this.userPassword = UserPassword;
     }
-
     public String getUserFullName() {
         return userFullName;
     }
-
     public void setUserFullName(String userFullName) {
         this.userFullName = userFullName;
     }
-
     public int getStatus() {
         return userStatus;
     }
-
     public void setStatus(int status) {
         this.userStatus = status;
     }
@@ -109,7 +100,7 @@ public class user extends koneksi{
         } catch (SQLException sQLException) {
             JOptionPane.showMessageDialog(null, "Gagal");
         }
-        }
+        }else{
         query = "update user set userEmail=?,userPassword=MD5(?),userFullname=?,userStatus=? where userName=?;";
         
         
@@ -127,6 +118,7 @@ public class user extends koneksi{
             JOptionPane.showMessageDialog(null, "Gagal");
         }
     }
+    }
     public ResultSet TampilUser(){
         query = "select * from user;";
         
@@ -141,9 +133,7 @@ public class user extends koneksi{
     }
     
     
-    public void reset(){
-        
-    }
+    
     
     public void login(){
         query = "select * from user where userName=? and userPassword=md5(?)";
