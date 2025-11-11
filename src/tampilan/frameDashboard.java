@@ -5,17 +5,10 @@
 package tampilan;
 import kelas.session;
 import com.formdev.flatlaf.FlatLightLaf;
-import java.awt.Color;
-import java.awt.Font;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-import java.awt.event.MouseAdapter;
-import java.awt.event.MouseEvent;
-import javax.swing.JMenuItem;
+
 import javax.swing.JOptionPane;
 import javax.swing.UnsupportedLookAndFeelException;
-import javax.swing.JPopupMenu;
-import kelas.user;
+
 /**
  *
  * @author MyBook Hype AMD
@@ -229,11 +222,11 @@ public class frameDashboard extends javax.swing.JFrame {
     private void bKategoriActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bKategoriActionPerformed
         new frameCategory().setVisible(true);
     }//GEN-LAST:event_bKategoriActionPerformed
-
+         
     private void hamburgerMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_hamburgerMouseClicked
 jPopupMenu1.show(hamburger, 0, hamburger.getHeight());     
     }//GEN-LAST:event_hamburgerMouseClicked
-
+  
     private void menuLogoutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuLogoutActionPerformed
         int pilihan = JOptionPane.showConfirmDialog(
     null,
@@ -250,15 +243,15 @@ if (pilihan == JOptionPane.YES_OPTION) {
 }
 
     }//GEN-LAST:event_menuLogoutActionPerformed
-
+                 
     private void bProdukActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bProdukActionPerformed
         new frameProduct().setVisible(true);
     }//GEN-LAST:event_bProdukActionPerformed
-
+   
     private void bUserActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bUserActionPerformed
       new FrameUser().setVisible(true);
     }//GEN-LAST:event_bUserActionPerformed
-      
+        
     /**
      * @param args the command line arguments
      */

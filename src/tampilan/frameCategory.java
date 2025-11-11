@@ -1,8 +1,5 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
- */
 package tampilan;
+
 import com.formdev.flatlaf.FlatLightLaf;
 import java.awt.Color;
 import java.sql.ResultSet;
@@ -12,7 +9,6 @@ import javax.swing.UnsupportedLookAndFeelException;
 import javax.swing.table.DefaultTableModel;
 import javax.swing.table.JTableHeader;
 import kelas.category;
-import kelas.user;
 /**
  *
  * @author MyBook Hype AMD
@@ -206,13 +202,13 @@ public class frameCategory extends javax.swing.JFrame {
     loadTable();
     reset();
     }//GEN-LAST:event_bTambahActionPerformed
-
+          
     private void tblCategoryMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tblCategoryMouseClicked
       int baris = tblCategory.rowAtPoint(evt.getPoint());
       tNama.setText(tblCategory.getValueAt(baris, 1).toString());
       
     }//GEN-LAST:event_tblCategoryMouseClicked
-
+ 
     private void bUbahActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bUbahActionPerformed
        try {
         int row = tblCategory.getSelectedRow();

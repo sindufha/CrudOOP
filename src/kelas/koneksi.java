@@ -19,5 +19,5 @@ public class koneksi {
                 System.err.println(e.getMessage());
                 
             }return mysqlconfig;
-        } 
+        }  
 }

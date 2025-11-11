@@ -20,46 +20,7 @@ public class frameLogin extends javax.swing.JFrame {
     public frameLogin() {
         initComponents();
         // Ukuran JFrame
-int frameWidth = 1280;
-int frameHeight = 720;
 
-// Ukuran elemen
-int textFieldWidth = 400;
-int textFieldHeight = 45;
-int labelWidth = 400;
-int labelHeight = 25;
-int buttonWidth = 400;
-int buttonHeight = 50;
-
-// Hitung posisi X untuk center (horizontal)
-int centerX = (frameWidth - textFieldWidth) / 2;
-
-// Posisi Y untuk setiap elemen (vertical spacing)
-int titleY = 100;
-int startY = 200;
-int spacing = 15;
-
-// Label "Username :"
-lblUsername.setBounds(centerX, startY, labelWidth, labelHeight);
-
-// TextField Username
-tUsername.setBounds(centerX, startY + labelHeight + 5, textFieldWidth, textFieldHeight);
-
-// Label "Password :"
-int passwordLabelY = startY + labelHeight + textFieldHeight + spacing + 5;
-lblPassword.setBounds(centerX, passwordLabelY, labelWidth, labelHeight);
-
-// PasswordField
-int passwordFieldY = passwordLabelY + labelHeight + 5;
-tPassword.setBounds(centerX, passwordFieldY, textFieldWidth, textFieldHeight);
-
-// Checkbox "Show Password"
-int checkboxY = passwordFieldY + textFieldHeight + 15;
-cShow.setBounds(centerX, checkboxY, 200, 25);
-
-// Button "Login"
-int buttonY = checkboxY + 25 + 20;
-bLogin.setBounds(centerX, buttonY, buttonWidth, buttonHeight);
     }
 
     /**
@@ -208,6 +169,10 @@ bLogin.setBounds(centerX, buttonY, buttonWidth, buttonHeight);
        
     }//GEN-LAST:event_bLoginActionPerformed
 
+       
+       
+       
+            
     private void cShowActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cShowActionPerformed
         // TODO add your handling code here:
         if (cShow.isSelected()) {

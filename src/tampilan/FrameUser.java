@@ -1,7 +1,4 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
- */
+
 package tampilan;
 import javax.swing.table.DefaultTableModel;
 import kelas.user;
@@ -10,10 +7,7 @@ import java.sql.SQLException;
 import javax.swing.JOptionPane;
 import com.formdev.flatlaf.FlatLightLaf;
 import javax.swing.UnsupportedLookAndFeelException;
-/**
- *
- * @author MyBook Hype AMD
- */
+
 public class FrameUser extends javax.swing.JFrame {
 
     /**
@@ -32,16 +26,11 @@ public class FrameUser extends javax.swing.JFrame {
     model.addColumn("Full Name");
     model.addColumn("Status");
     try {
-        // Membuat objek user dan mengambil data dari database
+        
         user usr = new user();
         ResultSet result = usr.TampilUser();
-
-        // Loop data baris per baris
         while (result.next()) {
-            // Cek status: 1 = Active, selain itu = Inactive
             String status = (result.getInt("userStatus") == 1) ? "Active" : "Inactive";
-
-            // Tambahkan baris ke dalam tabel model
             model.addRow(new Object[]{
                 result.getString("userName"),
                 result.getString("userEmail"),
@@ -293,7 +282,7 @@ void reset(){
         usr.tambahUser();
         load_table();
     }//GEN-LAST:event_bTambahActionPerformed
-
+    
     private void bHapusActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bHapusActionPerformed
         // TODO add your handling code here:
         user usr = new user();
@@ -329,7 +318,7 @@ void reset(){
         reset();
        
     }//GEN-LAST:event_bUbahActionPerformed
-    
+            
     private void tblUserMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tblUserMouseClicked
         // TODO add your handling code here:
         int baris = tblUser.rowAtPoint(evt.getPoint());
@@ -347,18 +336,18 @@ void reset(){
         tUserName.setEditable(false);
         
     }//GEN-LAST:event_tblUserMouseClicked
-
+   
     private void bResetActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bResetActionPerformed
         // TODO add your handling code here:\
         reset();
     }//GEN-LAST:event_bResetActionPerformed
-
+ 
     private void bKembaliActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bKembaliActionPerformed
         // TODO add your handling code here:
         dispose();
         
     }//GEN-LAST:event_bKembaliActionPerformed
-
+    
     /**
      * @param args the command line arguments
      */
